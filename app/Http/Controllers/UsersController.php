@@ -11,9 +11,26 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        
+        $histories = $user->histories()->orderBy('created_at', 'desc')->get();
 
-        return view('users.show', [
+        $data = [
             'user' => $user,
-        ]);
+            'histories' => $histories,
+        ];
+
+        // dd($histories);
+        return view('users.show', $data);
+    }
+    
+    public function map($id)
+    {
+        $user = User::find($id);
+
+        $data = [
+            'user' => $user,
+        ];
+
+        return view('maps.map', $data);
     }
 }

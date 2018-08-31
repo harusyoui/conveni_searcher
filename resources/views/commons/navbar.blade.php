@@ -14,6 +14,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
                         <li>{!! link_to_route('users.show', '検索履歴', ['id' => Auth::id()]) !!}</li>
+                        <li>{!! link_to_route('users.map', '地図検索', ['id' => Auth::id()]) !!}</li>
                         <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
                     @else
                         <li>{!! link_to_route('signup.get', 'Signup') !!}</li>

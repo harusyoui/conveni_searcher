@@ -23,5 +23,5 @@
 
 @section('content1')
     <script src="https://maps.googleapis.com/maps/api/js?v=3.33&key=AIzaSyB9JEBMiAo_CGBNNlgwmX0RArH10AdWVeM&libraries=places"></script>
-    <script src="{{ asset('js/map.js') }}"></script>
+    <script src="{{ secure_asset('js/map.js') }}"></script>
 @endsection

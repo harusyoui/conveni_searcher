@@ -25,16 +25,16 @@ class HistoriesController extends Controller
         }
     }
     
-     public function store(Request $request)
-        {
-            $this->validate($request, [
-                'content' => 'required|max:191',
-            ]);
-    
-            $request->user()->histories()->create([
-                'content' => $request->content,
-            ]);
-    
-            return redirect()->back();
-        }
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'content' => 'required|max:191',
+        ]);
+        
+        $request->user()->histories()->create([
+            'content' => $request->content,
+        ]);
+        
+        return redirect()->back();
+    }
 }

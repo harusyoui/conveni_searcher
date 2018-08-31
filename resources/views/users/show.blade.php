@@ -14,6 +14,7 @@
                 <li><a>検索履歴</a></li>
             </ul>
             aiueo
+            {!!  dd($histories); !!}
             @if (count($histories) > 0)
                 @include('histories.histories', ['histories' => $histories])
             @endif

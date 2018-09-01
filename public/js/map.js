@@ -7,7 +7,7 @@
     var service;
     var infowindow;
     var pyrmont = new google.maps.LatLng(35.681167,139.767052);
-    createMap(pyrmont)
+    createMap(pyrmont);
     
     
     

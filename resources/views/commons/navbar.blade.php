@@ -13,12 +13,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-                        <li>{!! link_to_route('users.show', '検索履歴', ['id' => Auth::id()]) !!}</li>
+                        <li>{!! link_to_route('users.show', 'メモ', ['id' => Auth::id()]) !!}</li>
                         <li>{!! link_to_route('users.map', '地図検索', ['id' => Auth::id()]) !!}</li>
-                        <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
+                        <li>{!! link_to_route('logout.get', 'ログアウト') !!}</li>
                     @else
-                        <li>{!! link_to_route('signup.get', 'Signup') !!}</li>
-                        <li>{!! link_to_route('login', 'Login') !!}</li>
+                        <li>{!! link_to_route('signup.get', 'ユーザー登録') !!}</li>
+                        <li>{!! link_to_route('login', 'ログイン') !!}</li>
                     @endif
                 </ul>
             </div>

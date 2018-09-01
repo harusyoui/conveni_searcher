@@ -17,9 +17,9 @@ class HistoriesController extends Controller
 
             $data = [
                 'user' => $user,
-                'histories' => $histories,
+                // 'histories' => $histories,
             ];
-            return view('users.show', $data);
+            return view('maps.map', $data);
         }else {
             return view('welcome');
         }
@@ -35,6 +35,17 @@ class HistoriesController extends Controller
             'content' => $request->content,
         ]);
         
+        return redirect()->back();
+    }
+    
+    public function destroy($id)
+    {
+        $history = \App\History::find($id);
+
+        if (\Auth::id() === $history->user_id) {
+            $history->delete();
+        }
+
         return redirect()->back();
     }
 }

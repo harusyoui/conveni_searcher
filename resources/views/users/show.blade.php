@@ -11,9 +11,8 @@
         </aside>
         <div class="col-xs-8">
             <ul class="nav nav-tabs nav-justified">
-                <li><a>検索履歴</a></li>
+                <li><a>メモ</a></li>
             </ul>
-            aiueo
             @if (isset($histories) > 0)
                 @include('histories.histories', ['histories' => $histories])
             @endif
